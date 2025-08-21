@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Notification</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        
+        .notification-container {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #ffeb3b;
+            color: #333;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            font-size: 18px;
+            animation: slide-in 0.5s ease-out;
+        }
+
+        .notification-icon {
+            font-size: 30px;
+            margin-right: 10px;
+        }
+
+        .notification-message {
+            flex-grow: 1;
+        }
+
+        .close-btn {
+            background-color: #ff5722;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+        .close-btn:hover {
+            background-color: #e64a19;
+        }
+
+        @keyframes slide-in {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="notification-container">
+        <div class="notification-icon">📝</div>
+        <div class="notification-message">You have 1 task to complete!</div>
+        <button class="close-btn" onclick="closeNotification()">Close</button>
+    </div>
+    <div class="con">
+        <canvas class="cs"></canvas>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        function closeNotification() {
+            const notification = document.querySelector('.notification-container');
+            notification.style.display = 'none';
+        }
+        // chart js
+        const ct = document.querySelector('.cs');
+        let chart = new Chart(ct, {
+    type: 'bar',
+    data: {
+        datasets: [{
+            data: [{
+                x: '2021-11-06 23:39:30',
+                y: 50
+            }, {
+                x: '2021-11-07 01:00:28',
+                y: 60
+            }, {
+                x: '2021-11-07 09:00:28',
+                y: 20
+            }]
+        }],
+    },
+    options: {
+        scales: {
+            x: {
+                min: '2021-11-07 00:00:00',
+            }
+        }
+    }
+});
+    </script>
+    
+</body>
+</html>

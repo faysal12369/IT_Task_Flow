@@ -1,0 +1,489 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/* Body styles */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(#d8dbfe, #f4bdfb); /* Gradient background */
+  overflow: hidden; /* Prevent scrolling */
+}
+
+/* Scrollbar Customization */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f4bdfb; /* Light color for scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #f4bdfb; /* Match the thumb color */
+  border-radius: 10px;
+  border: 3px solid #fff;
+}
+
+/* Main container */
+.container {
+  position: relative;
+  width: 98%;
+  height: 98%;
+  background: linear-gradient(#d8dbfe, #f4bdfb); /* Gradient background */
+  border-radius: 25px;
+  backdrop-filter: blur(15px); /* Increased blur for a softer background */
+  border: 5px solid #fff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3), 0 0 25px rgba(0, 0, 0, 0.4), 0 0 35px rgba(0, 0, 0, 0.5); /* Enhanced shadows */
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+  overflow: hidden;
+}
+
+/* Left side - logo and navigation */
+.left {
+  width: 23%;
+  height: 100%;
+  background-color: #2c3e50; /* Consistent with dark theme */
+  border-radius: 15px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #fff;
+}
+
+.logo {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.logo h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.logo img {
+  width: 100%;
+  max-width: 100px;
+  border-radius: 50%;
+  margin-top: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding-left: 10px;
+}
+
+nav li {
+  margin-top: 20px;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2em;
+}
+
+nav a {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+nav a .material-symbols-rounded {
+  margin-right: 15px;
+}
+
+nav a:hover {
+  background-color: #34495e;
+  padding-left: 15px;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+/* Close button */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.close .material-symbols-rounded {
+  font-size: 36px;
+  color: #fff;
+}
+
+.container .left .logout {
+  width: 100%;
+  height: 120px;
+  background-color: hwb(210 20% 63%);
+  border-radius: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+  z-index: 1;
+}
+
+.container .left .logout h4 {
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: 500;
+  margin-top: -5px;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .left .logout .btn {
+  width: 100%;
+  height: 50px;
+  background: #fff;
+  border: none;
+}
+
+.container .left .logout .btn button {
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* Right main content area */
+.container .right {
+  width: 75%;
+  height: 100vh; 
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px; 
+}
+
+/* Top section (Search & User info) */
+.top {
+  position: relative;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: #34495e;
+  backdrop-filter: blur(5px);
+  border-radius: 20px;
+}
+
+/* Search box */
+.searchbk {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.searchbk h2 {
+  color: #fff;
+  font-size: 1.4em;
+  cursor: pointer;
+}
+
+.searchbk .inputbk {
+  width: 450px;
+  height: 40px;
+  background: #fff;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  gap: 10px;
+}
+
+.searchbk .inputbk span {
+  color: #000;
+  cursor: pointer;
+}
+
+.searchbk .inputbk input {
+  width: 100%;
+  height: 25px;
+  border: none;
+  outline: none;
+  background: #fff;
+  font-size: 1.2em;
+  color: #000;
+}
+
+/* User info and notification */
+.user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.user h2{
+  font-size: 1.2em;
+  color: #fff;
+}
+.user span {
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.2em;
+}
+
+.user .userImg {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.user .userImg img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-color: #2c3e50;
+}
+
+.user .userImg h2 {
+  font-size: 1.2em;
+  line-height: 18px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.user .userImg h2 span {
+  color: #fff;
+  font-size: 1em;
+}
+
+.user .arro {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border: 3px solid #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user .arro span {
+  color: #fff;
+  font-size: 2em;
+  font-weight: 700;
+  transition: .3s ease;
+}
+
+.user .arro:hover span {
+  transform: scale(1.2); /* Enlarges icon on hover */
+}
+
+.user .toggle {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border: 3px solid #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user .toggle span {
+  color: #fff;
+  font-size: 1.5em;
+  font-weight: 500;
+  transition: all 0.3s ease, opacity 0s, visibility 0s;
+}
+
+.user .toggle:hover span {
+  transform: scale(1.1);
+}
+
+.user .toggle span:last-child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.user .toggle span:last-child .active:first-child {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.user .toggle span:last-child .active:last-child {
+  opacity: 1;
+}
+.cards-container {
+  display: flex;
+  gap: 20px;
+  height: 100%; 
+}
+
+.card{
+  background: #2c3e50;
+  padding: 20px;
+  border-radius: 15px;
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%; 
+}
+.asset{
+  position: relative;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.asset h2{
+  font-size: 1.2em;
+  line-height: 15px;
+}
+.asset h2 span{
+  font-size: 1em;
+}
+.dot{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dot span{
+  font-size: 1.5em;
+  font-weight: 800;
+  color: #fff;
+
+}
+.card h2{
+  color: #fff;
+}
+.progress{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+.process{
+  position: relative;
+  padding: 5px 5px;
+  border-radius: 2px;
+}
+.process h2{
+  background-color: #8383f9;
+  font-size: 1em;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+.priority{
+  position: relative;
+  padding: 5px 5px;
+}
+.priority ::before{
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  transform: translate(-50%, -50%);
+  background: #8383f9;
+  border-radius: 50%;
+  box-shadow: 0 0 2px #8383f9
+  0 0 5px #8383f9;
+}
+.priority h2{
+  white-space: nowrap;
+  background-color: #8383f9;
+  font-size: 1em;
+  font-weight: 600;
+}
+.task{
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  margin: 10px 0px;
+}
+.task h2{
+  font-size: 1em;
+}
+.line {
+  position: relative;
+  width: 100%;
+  height: 5px;
+  background-color: #fff; 
+  z-index: 1;  
+  overflow: hidden; 
+}
+
+.line::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: calc(100% - 40%); 
+  height: 100%;
+  background-color: #8383f9; 
+  z-index: 2; 
+}
+.due{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.due h2{
+  padding: 0px 10px;
+  border: 2px solid #f5bff5;
+  font-size: 1.1em;
+}
+/* Card Section for c2 */
+
+.card.c2 {
+  grid-row: 4/7;
+}
+.card.c2 .process h2 {
+  background-color: #69bc72;
+}
+.card.c2 .priority ::before {
+  background-color: #69bc72;
+  box-shadow: 0 0 2px #69bc72
+  0 0 5px #69bc72;
+}
+.card.c2 .priority h2{
+  background-color: #69bc72;
+}
+.card.c2 .line::before {
+  width: calc(100% - 67%);
+  background-color: #69bc72;
+}

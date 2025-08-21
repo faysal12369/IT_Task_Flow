@@ -1,0 +1,426 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/* Body styles */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(#d8dbfe, #f4bdfb); /* Gradient background */
+  overflow: hidden; /* Prevent scrolling */
+}
+
+/* Scrollbar Customization */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f4bdfb; /* Light color for scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #f4bdfb; /* Match the thumb color */
+  border-radius: 10px;
+  border: 3px solid #fff;
+}
+
+/* Main container */
+.container {
+  position: relative;
+  width: 95%;
+  height: 95vh;
+  background: rgba(255, 255, 255, 0.7); /* Slightly transparent background */
+  border-radius: 25px;
+  backdrop-filter: blur(10px); /* Background blur effect */
+  border: 5px solid #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 0, 0, 0.4), 0 0 30px rgba(0, 0, 0, 0.5); /* Shadows for depth */
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+  overflow: hidden;
+}
+
+/* Left Sidebar */
+.container .left {
+  position: relative;
+  width: 250px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.9); /* White background with opacity */
+  backdrop-filter: blur(5px);
+  border-radius: 20px;
+  box-shadow: 35px 35px 68px rgba(0, 0, 0, 0.2),
+    inset -8px -8px 16px 0px rgba(255, 255, 255, 0.6),
+    inset 0px 11px 28px 0px rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+  justify-content: space-between;
+}
+
+/* Logo and header inside left sidebar */
+.container .left header .logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.container .left header .logo h2 {
+  font-size: 1.2em;
+  font-weight: 700;
+  color: #000;
+  cursor: pointer;
+}
+
+/* Navigation menu items in the left sidebar */
+.container .left header nav {
+  padding: 20px 0 20px 20px;
+}
+
+.container .left header nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.container .left header nav ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  list-style: none;
+}
+
+.container .left header nav ul li a {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  width: 120%;
+  height: 120%;
+  text-decoration: none;
+  color: #000;
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+.container .left header nav ul li a:hover {
+  background: #f1f3ff; /* Light background on hover */
+}
+
+.container .left header nav ul li a .material-symbols-rounded {
+  font-size: 1.2em;
+  margin-right: 10px;
+}
+
+.container .left header nav ul li a .title {
+  font-size: 1em;
+}
+
+.container .left header nav ul li a:hover .material-symbols-rounded,
+.container .left header nav ul li a:hover .title {
+  color: #6577ff; /* Change color on hover */
+}
+
+/* Logout section */
+.container .left .logout {
+  width: 100%;
+  height: 250px;
+  background: linear-gradient(#d488e8, #8389f9); /* Gradient background */
+  border-radius: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+  z-index: -1;
+}
+
+.container .left .logout h4 {
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: 500;
+  margin-top: 15px;
+}
+
+.container .left .logout .btn {
+  width: 100%;
+  height: 40px;
+  background: #fff;
+  border-radius: 10px;
+}
+
+.container .left .logout .btn button {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border: none;
+  font-size: 1.2em;
+  color: #000;
+  font-weight: 900;
+  cursor: pointer;
+  outline: none;
+}
+
+/* Right main content area */
+.container .right {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Top section (Search & User info) */
+.container .right .top {
+  position: relative;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: #fff;
+  backdrop-filter: blur(5px);
+  border-radius: 20px;
+  box-shadow: 35px 35px 68px rgba(0, 0, 0, 0.2),
+    inset -8px -8px 16px 0px rgba(255, 255, 255, 0.6),
+    inset 0px 11px 28px 0px rgb(255, 255, 255);
+}
+
+/* Search box */
+.container .right .top .searchbk {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.container .right .top .searchbk h2 {
+  color: #000;
+  font-size: 1.4em;
+  cursor: pointer;
+}
+
+.container .right .top .searchbk .inputbk {
+  width: 250px;
+  height: 40px;
+  background: #f8f2fe;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  gap: 10px;
+}
+
+.container .right .top .searchbk .inputbk span {
+  color: #999;
+  cursor: pointer;
+}
+
+.container .right .top .searchbk .inputbk input {
+  width: 100%;
+  height: 25px;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 1.2em;
+  color: #000;
+}
+
+/* User info and notification */
+.container .right .top .user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.container .right .top .user span {
+  color: #000;
+  cursor: pointer;
+}
+
+.container .right .top .user .userImg {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.container .right .top .user .userImg img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.container .right .top .user .userImg h2 {
+  font-size: 1.2em;
+  line-height: 18px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.container .right .top .user .userImg h2 span {
+  color: #999;
+  font-size: 1em;
+}
+
+.container .right .top .user .arro {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border: 3px solid #999;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .right .top .user .arro span {
+  color: #000;
+  font-size: 2em;
+  font-weight: 700;
+  transition: .3s ease;
+}
+
+.container .right .top .user .arro:hover span {
+  transform: scale(1.2); /* Enlarges icon on hover */
+}
+
+.container .right .top .user .toggle {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border: 3px solid #999;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: center;
+  line-height: 50px;
+}
+
+.container .right .top .user .toggle span {
+  color: #000;
+  font-size: 1.5em;
+  font-weight: 500;
+  transition: all 0.3s ease, opacity 0s, visibility 0s;
+}
+.container .right .top .user .toggle:hover span {
+  transform: scale(1.1);
+}
+.container .right .top .user .toggle span:last-child {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% , -50%);
+  opacity: 0;
+  visibility: hidden;
+}
+.container .right .top .user .toggle span:first-child {
+  opacity: 0;
+  visibility: hidden;
+}
+.container .right .top .user .toggle span:last-child .active:first-child{
+  opacity: 0;
+  visibility: hidden;
+}
+.container .right .top .user .toggle span:last-child .active:last-child{
+  opacity: 1;
+  
+}
+/* Dashboard Card */
+.container .right main {
+  position: relative;
+  width: 100%;
+  height: calc(100%-90px);  /* This needs to be adjusted */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  gap: 20px;
+}
+
+/* Card styles */
+.container .right main .card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9); /* White background with opacity */
+  backdrop-filter: blur(5px);
+  border-radius: 20px;
+  box-shadow: 35px 35px 68px rgba(0, 0, 0, 0.2),
+    inset -8px -8px 16px 0px rgba(255, 255, 255, 0.6),
+    inset 0px 11px 28px 0px rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column; /* Ensure the child elements stack vertically */
+  justify-content: flex-start; /* Aligns content from top to bottom */
+  align-items: stretch; /* Ensures children take full width */
+  grid-row: 1 / 4;
+}
+
+/* Asset Section */
+.container .right main .card .asset {
+  width: 100%;
+  display: flex;
+  flex-direction: column; /* Stack child elements vertically */
+  gap: 10px; /* Space between the elements */
+  margin-top: 20px; /* Space between task and previous div */
+}
+
+.container .right main .card .asset h2 {
+  font-size: 1.2em;
+  color: #000;
+  line-height: 18px;
+  margin: 0;
+}
+
+.container .right main .card .asset h2 span {
+  color: #000;
+  font-size: 1em;
+}
+
+.container .right main .card .asset .dot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Progress Section */
+.container .right main .card .progress {
+  width: 100%;
+  display: flex;
+  flex-direction: column; /* Stack child elements vertically */
+  gap: 10px; /* Space between the elements */
+  margin-top: 20px; /* Space between task and previous div */
+}
+
+/* Task Section */
+.container .right main .card .task {
+  width: 100%;
+  display: flex;
+  flex-direction: column; /* Stack child elements vertically */
+  gap: 10px; /* Space between the elements */
+  margin-top: 20px; /* Space between task and previous div */
+}
+
+.container .right main .card .task .due {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+}
+
+.container .right main .card .task .due h2 {
+  font-size: 1.2em;
+}

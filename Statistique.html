@@ -1,0 +1,104 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css files/statistique.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>IT TaskFlow</title>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Left Sidebar -->
+        <div class="left">
+            <main>
+                <!-- Logo Section -->
+                <div class="logo">
+                    <h2>IT TaskFlow</h2>
+                </div>
+
+                <!-- Navigation Menu -->
+                <nav>
+                    <ul>
+                        <li><a href="index.html"><span class="material-symbols-rounded">dashboard</span><span class="title">DashBoard</span></a></li>
+                        <li><a href="task.html"><span class="material-symbols-rounded">task_alt</span><span class="title">Les Taches</span></a></li>
+                        <li><a href="sim.html"><span class="material-symbols-rounded">sim_card</span><span class="title">La Float</span></a></li>
+                        <li><a href="Statistique.html"><span class="material-symbols-rounded">equalizer</span><span class="title">Les Statistiques</span></a></li>
+                        <li><a href="#" ><span class="material-symbols-rounded">circle_notifications</span><span class="title">Notification</span></a></li>
+                        <li><a href="comptes.html"><span class="material-symbols-rounded">manage_accounts</span><span class="title">Gestion Des Comptes</span></a></li>
+                    </ul>
+                </nav>
+            </main>
+
+            <!-- Logout Section -->
+            <div class="logout">
+                <h4><strong>Retour à L'écran D'accueil</strong></h4>
+                <div class="btn">
+                    <button type="button">Se Déconnecter</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Main Content Area -->
+        <div class="right">
+            <div class="top">
+                <!-- Search Bar Section -->
+                <div class="searchbk">
+                    <h2>DashBoard</h2>
+                    <div class="inputbk">
+                        <span class="material-symbols-rounded">search</span>
+                        <input type="text" placeholder="Recherche...">
+                        <span class="material-symbols-rounded">close</span>
+                    </div>
+                </div>
+
+                <!-- User Info Section -->
+                <div class="user">
+                    <span class="material-symbols-rounded">Notifications</span>
+                    <div class="userImg">
+                        <img src="Blue-circle-User.png" alt="User Image">
+                    </div>
+                    <h2>Fayçal</h2><br>
+                    <span>Administrateur</span>
+                    <div class="arro">
+                        <span class="material-symbols-rounded">expand_more</span>
+                    </div>
+                    <div class="toggle">
+                        <span class="material-symbols-rounded">menu</span>
+                        <span class="material-symbols-rounded">close</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stq-container">
+                <div class="stq-task">
+                    <div class="stq-top">
+                        <h2>Taches</h2>
+                        <h3 class="Date"></h3>
+                    </div>
+                    <canvas class="char"></canvas>
+                </div>
+
+                <div class="stq-type">
+                    <div class="stqtime">
+                        <h2>De</h2>
+                        <h3 class="current-Date"></h3>
+                        <h2>A</h2>
+                        <h3 class="inc-Date"></h3>
+                    </div>
+                    <canvas class="chr"></canvas>
+                </div>
+                <div class="psn">
+                    <div class="psn-top">
+                        <H2>Demandeurs de service</H2>
+                    </div>
+                    <canvas class="prsn"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="stat.js"></script>
+</body>
+</html>
